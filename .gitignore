@@ -1,0 +1,20 @@
+# Cache files
+__pycache__/
+.DS_Store
+
+# Project files
+node_modules/
+.idea/
+*.log
+.env
+.env.dev
+.env.test
+env
+venv
+env/
+venv/
+*.session
+
+# vscode
+.vscode/
+.history/
