@@ -7,7 +7,6 @@ Factors loaded from: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/dat
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import statsmodels.formula.api as smf
 import statsmodels.api as sm
 import getFamaFrenchFactors as gff
 
