@@ -1,5 +1,7 @@
 '''
 Carhart four-factor model is an extra factor addition in the Fama–French three-factor model
+
+Factors loaded from: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html#Research
 '''
 
 import numpy as np
