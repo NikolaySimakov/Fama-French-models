@@ -71,7 +71,7 @@ class FamaFrench5Factor:
 
         # Plot Fama-French factors
         plt.figure(figsize=(20, 10))
-        fig3, axs = plt.subplots(1, 3)
+        fig3, axs = plt.subplots(1, 5)
         axs[0].plot(data['Mkt-RF'].rolling(3).mean(), linewidth=2.5)
         axs[0].plot(data[ticker])
         axs[0].set_title('Stock compared to market returns')
@@ -101,5 +101,5 @@ class FamaFrench5Factor:
               cor['HML'].iloc[0])
         print(f'{ticker} correlation with return on equity index:',
               cor['RMW'].iloc[0])
-        print(f'{ticker} correlation with value stocks index:',
+        print(f'{ticker} correlation with investments:',
               cor['HML'].iloc[0])
