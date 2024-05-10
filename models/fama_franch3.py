@@ -1,7 +1,7 @@
 '''
 Fama-French 3-Factor Model
 
-Factors loaded from: 
+Factors loaded from: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html#Research
 '''
 
 import numpy as np
