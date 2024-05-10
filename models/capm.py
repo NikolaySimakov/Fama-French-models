@@ -5,6 +5,7 @@ CAPM Model
 
 import numpy as np
 import getFamaFrenchFactors as gff
+import statsmodels.api as sm
 import pandas as pd
 
 
@@ -23,7 +24,7 @@ class CAPM:
         self.df = df
         self.beta = None  # Beta coefficient will be calculated during fitting
 
-    def fit(self, ticker) -> None:
+    def fit(self, ticker, show_info=False) -> None:
         """
         Fit the CAPM model to the given asset returns and market returns.
 
@@ -40,6 +41,25 @@ class CAPM:
         data = data.set_index('Date')
         data = data.dropna()
         self.beta = (data[ticker] - data['RF']) / self.factors['Mkt-RF']
+
+        Y = data[ticker] - data['RF']  # substract the risk free rate
+        X = data[self.factor_names]
+
+        # build model
+        self.model = sm.OLS(Y, X)
+        result = self.model.fit()
+
+        if show_info:
+            print(result.summary())
+            avr = self.factors.drop('Date', axis=1).apply(np.mean)
+            self.beta = result.params
+            exp_returns = self.beta*avr['Mkt-RF']
+            e_rets = exp_returns - data['RF'].mean()
+            print(f'The expected monthly return for {ticker} is:', e_rets)
+            print(f'The expected anual return for {ticker} is:', ((
+                1 + e_rets) ** 12) - 1)
+
+        return result
 
     def predict(self, X) -> np.ndarray:
         """
