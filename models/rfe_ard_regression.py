@@ -47,7 +47,6 @@ class RFEARDRegression:
         X_train_selected = self.selector.fit_transform(X_train, y_train)
         # Fit the ARDRegression model on the selected features
         self.ard.fit(X_train_selected, y_train)
-        return self.ard
 
     def predict(self, X_test):
         """
