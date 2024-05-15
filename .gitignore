@@ -15,6 +15,9 @@ env/
 venv/
 *.session
 
+# models
+model.pth
+
 # vscode
 .vscode/
 .history/
