@@ -29,3 +29,11 @@ Study of Fama-French stock return models using data from the S&P 500.
 - sklearn feature importance
 - boosting feature importance
 - boruta
+
+## Models
+
+A comparison was made of various models with the Fama-French model.
+
+### Gradient Boosting vs 5-factor Fama-French
+
+![Gradient Boosting](./docs/images/boosting_fama.png)
