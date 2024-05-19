@@ -34,6 +34,14 @@ Study of Fama-French stock return models using data from the S&P 500.
 
 A comparison was made of various models with the Fama-French model.
 
+### Lasso vs 5-factor Fama-French
+
+![Lasso](./docs/images/lasso_fama.png)
+
+### ARD Regression vs 5-factor Fama-French
+
+![ARD](./docs/images/ardregr_fama_2.png)
+
 ### Gradient Boosting vs 5-factor Fama-French
 
 ![Gradient Boosting](./docs/images/boosting_fama.png)
