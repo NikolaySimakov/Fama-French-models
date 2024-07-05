@@ -21,6 +21,8 @@ Study of Fama-French stock return models using data from the S&P 500.
 ## Nonlinear methods
 
 - Gradient Boosting
+- Lasso and Ridge regressions
+- ARD regression
 - MLNN
 - LSTM
 
@@ -28,7 +30,6 @@ Study of Fama-French stock return models using data from the S&P 500.
 
 - sklearn feature importance
 - boosting feature importance
-- boruta
 
 ## Models
 
@@ -41,6 +42,10 @@ A comparison was made of various models with the Fama-French model.
 ### ARD Regression vs 5-factor Fama-French
 
 ![ARD](./docs/images/ardregr_fama_2.png)
+
+### ARD vs Lasso
+
+![ARD vs Lasso](./docs/images/ard_lasso.png)
 
 ### Gradient Boosting vs 5-factor Fama-French
 

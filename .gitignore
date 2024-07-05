@@ -17,6 +17,7 @@ venv/
 
 # models
 model.pth
+data/market_data
 
 # vscode
 .vscode/
