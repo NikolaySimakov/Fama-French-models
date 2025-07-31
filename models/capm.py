@@ -2,7 +2,7 @@
 CAPM Model
 '''
 
-
+#Это программа
 import numpy as np
 import getFamaFrenchFactors as gff
 import statsmodels.api as sm
